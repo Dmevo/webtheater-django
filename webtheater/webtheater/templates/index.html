@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebTheater</title>
+</head>
+<body>
+    {% load static %}
+    <h1>WebTheater</h1>
+    <hr>
+    {% for video in video_list %}
+    <div>
+        <p><a href="{% url 'video' id=video.get_id %}"><img src="{% static 'img/' %}{{ video.get_url_img }}" width="550px" height="300px"></a></p>
+        
+        <h2>{{ video.get_titulo }}</h2>
+        
+    </div>
+    <hr>
+    {% endfor %}
+</body>
+</html>
