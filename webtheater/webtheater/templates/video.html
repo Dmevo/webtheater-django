@@ -7,10 +7,13 @@
     <title>Video</title>
 </head>
 <body>
-    {{ video.get_url_video }}<br>
-    {{ video.get_descricao }}<br>
-    {{ video.get_qtd_visualizacao }}<br>
-    {{ video.get_qtd_curtida }}<br>
-    {{ video.get_data_publi }}<br>
+    <iframe width="900" height="655" src="{{ video.get_url_video }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+    <h1>{{ video.get_titulo }}</h1>
+    <h2>{{ video.get_qtd_visualizacao }} Visualizações<br> 
+        {{ video.get_qtd_curtida }} Curtidas<br></h2>
+
+    <h3>{{ video.get_descricao }}</h3>
+    <h4>{{ video.get_data_publi }}</h4>
+    <a href="{% url 'index' %}"><button>Voltar</button></a>
 </body>
 </html>

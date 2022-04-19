@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from webtheater.models.video import Video
 
 video_list = [
-    Video(1, "https://www.youtube.com/watch?v=waTob1IM4UM&t=9s&ab_channel=MarvelBrasil",
+    Video(1, "https://www.youtube.com/embed/waTob1IM4UM",
         "thor.png", 
         "Thor: Love and Thunder | Official Teaser", 
         "Here it is. ❤️  + ⚡", 
@@ -10,7 +10,7 @@ video_list = [
         "916 Mil", 
         "18 de abril de 2022"
         ),
-    Video(2, "https://www.youtube.com/watch?v=m9EX0f6V11Y&ab_channel=MarvelEntertainment",
+    Video(2, "https://www.youtube.com/embed/m9EX0f6V11Y",
         "ms_marvel.jpg",
         "Marvel Studios Ms. Marvel | Official Trailer | Disney+", 
         "The future is in her hands.", 
